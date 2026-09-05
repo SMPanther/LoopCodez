@@ -222,6 +222,59 @@ export const projects: CaseStudy[] = [
     reflection:
       "Treating the agent as a task runner — not a conversational partner — changed how the team trusted it. Transparency beat personality.",
   },
+  {
+  slug: "leadforge-ai-lead-generation-platform",
+  title: "LeadForge — AI-Powered Lead Generation Platform",
+  category: "SaaS & Automation", // adjust to match your existing category taxonomy
+  serviceSlug: "saas-automation",
+  role: "Full-Stack Engineering & Product Design",
+  timeline: "In development",
+  year: "2026",
+  featured: true,
+  displayIndex: 1, // adjust based on where it sits among your other case studies
+  typeTags: ["WEB", "SAAS", "AI"],
+  status: "live", // not deployed publicly yet -- keep honest until it is
+  approved: true,
+  
+  liveUrl:"#",
+  // liveUrl intentionally omitted -- no public deployment yet
+  outcome:
+    "A working lead-generation pipeline for agencies: real business discovery, a qualification system based on actual contact data, and AI-generated website audits and outreach drafts.",
+  problem:
+    "Agencies doing outbound prospecting waste hours manually scrolling maps and social media, guessing which local businesses have outdated sites or no online presence at all, then chasing down contact info by hand.",
+  insight:
+    "The bottleneck isn't finding businesses — it's knowing which ones are actually worth pitching. A lead is only useful if there's a real way to reach them, and outreach lands better when it references something true about their actual site, not a generic pitch.",
+  approach: [
+    "Built a discovery engine on OpenStreetMap/Geoapify so any city + category search returns real, addressable businesses — no manual sourcing.",
+    "Designed qualification around actual reachability: a lead only counts as qualified once it has a phone, email, or website on file, not a manually-flipped status flag.",
+    "Added an AI audit step that performs a live check on a business's website (reachable? HTTPS? page title?) and has Gemini summarize the real opportunity from that signal.",
+    "Chained the audit into AI-drafted outreach — a personalized first-touch email generated from the actual audit findings, not a template.",
+  ],
+  designDecisions: [
+    "Custom design system (ink neutrals + an ember/forge accent) rather than default component-library styling, tying the visual identity to the product name.",
+    "Lead scores render on a cold-to-hot heat scale instead of a plain number, reinforcing the 'forge' metaphor at the UI level.",
+    "Space Grotesk for display type, Inter for body, IBM Plex Mono for data — a deliberate type pairing rather than a single default font.",
+  ],
+  technologies: [
+    "React",
+    "Tailwind CSS",
+    "FastAPI",
+    "PostgreSQL (Supabase)",
+    "SQLAlchemy + Alembic",
+    "OpenStreetMap / Geoapify",
+    "Google Gemini API",
+    "JWT Auth + RBAC",
+  ],
+  interactionDetail:
+    "Run a discovery search, click straight into any result for full lead detail, update pipeline status, log notes, and trigger AI audit/proposal generation — all from one flow, no page-to-page context loss.",
+  results: [
+    "End-to-end pipeline working: discover → qualify (by real contact data) → AI audit → AI-drafted outreach.",
+    "Auth, RBAC, and a persisted Postgres schema running on Supabase.",
+    "Zero paid/card-gated dependencies in the discovery layer — built specifically around free, no-card APIs.",
+  ],
+  reflection:
+    "The most useful lesson wasn't the AI integration — it was that 'qualified' needed a strict, data-backed definition (has contact info) instead of a manually-set flag, or the whole pipeline would fill up with leads nobody could actually reach.",
+}
 ];
 
 export function getFeaturedProjects(): CaseStudy[] {
