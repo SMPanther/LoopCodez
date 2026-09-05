@@ -223,6 +223,69 @@ export const projects: CaseStudy[] = [
       "Treating the agent as a task runner — not a conversational partner — changed how the team trusted it. Transparency beat personality.",
   },
   {
+  slug: "horizon-boys-hostel",
+  title: "Horizon Boys Hostel — Modern Hostel Website",
+  category: "Web Development",
+  serviceSlug: "web-development",
+  role: "Design & Front-end Engineering",
+  timeline: "Shipped",
+  year: "2026",
+  featured: true,
+  displayIndex: 3,
+  typeTags: ["WEB", "HOSPITALITY"],
+  status: "live",
+  approved: true,
+ 
+  liveUrl: "https://horizon-hostel.vercel.app/",
+
+  outcome:
+    "A modern, responsive hostel website designed to showcase rooms, facilities, meal plans, and hostel information while turning visitor interest into direct WhatsApp inquiries and bookings.",
+
+  problem:
+    "Horizon Boys Hostel needed a professional online presence that could clearly communicate its rooms, facilities, meal options, location, and contact information while making it easy for prospective residents to inquire or book.",
+
+  insight:
+    "For a local hostel, the website needs to do more than display information. Prospective residents want to quickly understand the accommodation, see the facilities, check available options, and contact the hostel directly. WhatsApp provided the most natural conversion path for this audience.",
+
+  approach: [
+    "Structured the website around the key questions prospective residents have: rooms, facilities, meals, location, gallery, and booking.",
+    "Built reusable content-driven sections so hostel information such as rooms, facilities, meal plans, gallery images, and contact details can be updated easily.",
+    "Integrated WhatsApp throughout the experience, allowing visitors to ask about rooms, prices, meal plans, bookings, and general inquiries with pre-filled messages.",
+    "Added booking and quick-message forms with validation to make inquiries more structured while maintaining WhatsApp as the primary communication channel.",
+  ],
+
+  designDecisions: [
+    "Used a clean, modern visual system designed to make the hostel feel trustworthy, comfortable, and professionally managed.",
+    "Prioritized room and facility imagery so visitors can understand the accommodation before making an inquiry.",
+    "Kept navigation and conversion paths simple, with prominent booking and WhatsApp actions throughout the site.",
+    "Designed the experience responsively so prospective residents can browse rooms and contact the hostel easily from mobile devices.",
+  ],
+
+  technologies: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "React Hook Form",
+    "WhatsApp Integration",
+    "Responsive UI",
+  ],
+
+  interactionDetail:
+    "Scroll-based animations, responsive navigation, interactive room and facility sections, keyboard-accessible gallery lightbox, validated inquiry forms, and direct WhatsApp handoff with pre-filled messages.",
+
+  results: [
+    "Delivered a complete responsive marketing website for Horizon Boys Hostel.",
+    "Created dedicated experiences for rooms, facilities, meal plans, gallery, booking, and contact.",
+    "Integrated WhatsApp across booking, room inquiries, meal-plan inquiries, and general contact.",
+    "Built the site as a static React application that can be deployed without a server-side backend.",
+    "Made core hostel content configurable through centralized data files for easier future updates.",
+  ],
+
+  reflection:
+    "A hostel website should reduce uncertainty before asking someone to make contact. By combining clear accommodation information, visual presentation, accessible content, and direct WhatsApp communication, the website creates a simple path from discovery to inquiry."
+},
+  {
   slug: "leadforge-ai-lead-generation-platform",
   title: "LeadForge — AI-Powered Lead Generation Platform",
   category: "SaaS & Automation", // adjust to match your existing category taxonomy
