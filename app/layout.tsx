@@ -40,12 +40,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.title,
-    template: "%s · Studio 105",
+    template: "%s · loopcodez",
   },
   description: siteConfig.description,
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/icon.svg" }],
+    icon: [{ url: "/loopcodez-logo.jpeg", type: "image/jpeg" }],
+    apple: [{ url: "/loopcodez-logo.jpeg" }],
   },
   openGraph: {
     title: siteConfig.title,
@@ -86,8 +86,10 @@ export default function RootLayout({
       <body className="min-h-dvh antialiased" suppressHydrationWarning>
         <div id="site-loader-static" className="site-loader-static" aria-hidden="true">
           <div className="site-loader-static__inner">
-            <p className="site-loader-static__brand">Studio 105</p>
-            <span className="site-loader-static__mark">105</span>
+            <p className="site-loader-static__brand">loopcodez</p>
+            <span className="site-loader-static__mark">
+              <img src="/loopcodez-logo.jpeg" alt="" />
+            </span>
             <div className="site-loader-static__track" aria-hidden>
               <div className="site-loader-static__bar" />
             </div>

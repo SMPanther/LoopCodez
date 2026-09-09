@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://studio105.dev";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://loopcodez.dev";
 
 export const siteConfig = {
-  name: "Studio 105",
-  title: "Studio 105 — Design, Build & Ship",
+  name: "loopcodez",
+  title: "loopcodez — Design, Build & Ship",
   description:
-    "Studio 105 is a creative-tech studio founded by Umer and Saqlain. We design, build, automate, and ship digital products with craft.",
+    "loopcodez is a creative-tech studio founded by Umer and Saqlain. We design, build, automate, and ship digital products with craft.",
   url: siteUrl,
   ogImage: `${siteUrl}/og-image.png`,
   locale: "en_US",
@@ -29,7 +29,7 @@ export function createPageMetadata({
     description: desc,
     alternates: { canonical: url },
     openGraph: {
-      title: `${title} · Studio 105`,
+      title: `${title} · loopcodez`,
       description: desc,
       url,
       siteName: siteConfig.name,
@@ -38,7 +38,7 @@ export function createPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} · Studio 105`,
+      title: `${title} · loopcodez`,
       description: desc,
     },
   };

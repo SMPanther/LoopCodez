@@ -21,7 +21,7 @@ export default function NotFound() {
           </Button>
         </div>
         <p className="mt-12 font-mono text-xs uppercase tracking-widest text-text-subtle">
-          Studio 105 · Room 105 origin
+          loopcodez · Room 105 origin
         </p>
       </div>
     </div>

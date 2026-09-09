@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo/metadata";
 export const metadata = createPageMetadata({
   title: "Work",
   description:
-    "Selected Studio 105 case studies in ecommerce, web apps, automation, and AI.",
+    "Selected loopcodez case studies in ecommerce, web apps, automation, and AI.",
   path: "/work",
 });
 

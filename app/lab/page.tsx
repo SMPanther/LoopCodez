@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo/metadata";
 export const metadata = createPageMetadata({
   title: "Lab",
   description:
-    "Studio 105 lab — experiments in WebGL, AI, creative coding, and interactive systems.",
+    "loopcodez lab — experiments in WebGL, AI, creative coding, and interactive systems.",
   path: "/lab",
 });
 
@@ -21,7 +21,7 @@ export default function LabPage() {
         </h1>
         <p className="mb-12 max-w-2xl body-lg">
           Experiments, prototypes, and creative coding — not client work. This is
-          where Studio 105 tests ideas before they ship.
+          where loopcodez tests ideas before they ship.
         </p>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

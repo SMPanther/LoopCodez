@@ -6,6 +6,7 @@ import { EASE } from "@/lib/motion/easing";
 import { shouldUseLightMotion } from "@/lib/motion/device-profile";
 import { isLoaderComplete, shouldRunLoader, ensureAppInteractive, completeLoader } from "@/lib/loader/loader-gate";
 import { startLoaderRuntime } from "@/lib/loader/loader-runtime";
+import { BrandMark } from "@/components/layout/BrandMark";
 
 export function SiteLoader() {
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -87,17 +88,15 @@ export function SiteLoader() {
       className="site-loader"
       role="status"
       aria-live="polite"
-      aria-label="Loading Studio 105"
+      aria-label="Loading loopcodez"
     >
       <div ref={panelRef} className="site-loader__panel">
         <div className="site-loader__grid" aria-hidden />
         <div className="site-loader__inner">
           <p data-loader-brand className="site-loader__brand">
-            Studio 105
+            loopcodez
           </p>
-          <span data-loader-mark className="site-loader__mark" aria-hidden>
-            105
-          </span>
+          <BrandMark className="site-loader__mark" />
           <div className="site-loader__track" aria-hidden>
             <div ref={barRef} className="site-loader__bar" />
           </div>

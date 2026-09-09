@@ -4,7 +4,7 @@ import { useLayoutEffect, useRef } from "react";
 import Link from "next/link";
 import { AmbientBackground } from "@/components/graphics/AmbientBackground";
 import { HeroFrameLines } from "@/components/graphics/HeroFrameLines";
-import { HeroScene } from "@/components/webgl/HeroScene";
+import { HeroSceneFallback } from "@/components/webgl/HeroSceneFallback";
 import { LineReveal } from "@/components/motion/LineReveal";
 import { gsap, registerGsapPlugins } from "@/lib/motion/register-gsap";
 import { DURATION, EASE } from "@/lib/motion/easing";
@@ -81,7 +81,7 @@ export function HeroSection() {
       <HeroFrameLines />
 
       <div className="hero-canvas-layer" data-hero-visual aria-hidden>
-        <HeroScene />
+        <HeroSceneFallback className="hero-visual-fallback--brand" />
       </div>
 
       <div className="hero-content-layer container-site relative z-10 flex min-h-[100dvh] flex-col justify-between py-[calc(var(--nav-height)+1rem)] pb-6 md:py-[calc(var(--nav-height)+1.5rem)] md:pb-8">
@@ -116,8 +116,8 @@ export function HeroSection() {
             data-hero-hint
             className="max-w-xs font-mono text-xs uppercase leading-relaxed tracking-widest text-text-subtle"
           >
-            <span className="hidden md:inline">Hold to disassemble · move to tilt</span>
-            <span className="md:hidden">Studio 105 · design, build, ship</span>
+            <span className="hidden md:inline">loopcodez · design, build, ship</span>
+            <span className="md:hidden">loopcodez · design, build, ship</span>
           </p>
           <div className="hidden font-mono text-xs uppercase leading-relaxed tracking-widest text-text-subtle md:block">
             <p className="text-paper-muted">Est. Room 105</p>

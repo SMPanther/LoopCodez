@@ -237,7 +237,7 @@ export function HeroSceneCanvas({ className }: HeroSceneCanvasProps) {
       className={`hero-visual-canvas ${isLightMotion ? "hero-visual-canvas--light" : ""} ${className ?? ""}`}
       aria-label={
         isLightMotion
-          ? "Studio 105 signature object"
+          ? "loopcodez signature object"
           : "Interactive 105 object — hold to disassemble, move to tilt"
       }
     >

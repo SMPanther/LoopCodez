@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { Magnetic } from "@/components/motion/Magnetic";
+import { BrandMark } from "@/components/layout/BrandMark";
 import { NavLinkMotion, ScrollHeader } from "@/components/motion/Interactions";
 import { Button } from "@/components/ui/Button";
 import { ensureAppInteractive, onLoaderComplete } from "@/lib/loader/loader-gate";
@@ -56,13 +57,11 @@ export function SiteHeader() {
         <Link
           href="/"
           className="group flex items-center gap-3 transition-opacity hover:opacity-90"
-          aria-label="Studio 105 home"
+          aria-label="loopcodez home"
         >
-          <span className="mark-105" aria-hidden>
-            105
-          </span>
+          <BrandMark className="brand-mark--bare" />
           <span className="hidden font-display text-sm font-semibold tracking-tight sm:inline">
-            Studio 105
+            loopcodez
           </span>
         </Link>
 

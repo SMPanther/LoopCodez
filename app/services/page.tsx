@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo/metadata";
 export const metadata = createPageMetadata({
   title: "Services",
   description:
-    "Studio 105 services: AI agents, automations, web development, app development, ecommerce, and content management.",
+    "loopcodez services: AI agents, automations, web development, app development, ecommerce, and content management.",
   path: "/services",
 });
 

@@ -163,7 +163,7 @@ export const originTimeline = [
   { label: "Room 105", detail: "Two roommates, one shared room" },
   { label: "First experiments", detail: "Prototypes, tools, late-night builds" },
   { label: "First products", detail: "Real problems, real deadlines" },
-  { label: "Studio 105", detail: "The habit became the studio" },
+  { label: "loopcodez", detail: "The habit became the studio" },
 ];
 
 export const whatWeBuild = [
@@ -177,7 +177,7 @@ export const whatWeBuild = [
 
 export const siteCopy = {
   hero: {
-    eyebrow: "Studio 105",
+    eyebrow: "loopcodez",
     headline: "We design, build, and ship digital products with craft.",
     secondary:
       "A creative-tech studio founded by Umer and Saqlain — two roommates who turned Room 105 into a place where ideas become shipped work.",
@@ -186,7 +186,7 @@ export const siteCopy = {
   },
   about: {
     title: "Built from the same room.",
-    body: "Studio 105 started in Room 105, where two roommates began building things together. What started as experiments, late nights, and unfinished ideas became a studio focused on turning ambitious ideas into shipped digital products.",
+    body: "loopcodez started in Room 105, where two roommates began building things together. What started as experiments, late nights, and unfinished ideas became a studio focused on turning ambitious ideas into shipped digital products.",
   },
   cta: {
     title: "Have something worth building?",
