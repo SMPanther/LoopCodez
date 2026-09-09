@@ -44,6 +44,7 @@ export function HeroSection() {
             ease: EASE.out,
           },
         );
+
         gsap.fromTo(
           "[data-hero-hint]",
           { opacity: 0 },
@@ -81,16 +82,19 @@ export function HeroSection() {
       <HeroFrameLines />
 
       <div className="hero-canvas-layer" data-hero-visual aria-hidden>
-        <HeroSceneFallback className="hero-visual-fallback--brand" />
+        <HeroSceneFallback  />
       </div>
 
       <div className="hero-content-layer container-site relative z-10 flex min-h-[100dvh] flex-col justify-between py-[calc(var(--nav-height)+1rem)] pb-6 md:py-[calc(var(--nav-height)+1.5rem)] md:pb-8">
         <div data-hero-content className="hero-copy max-w-3xl pt-2 md:pt-4">
           <p className="hero-eyebrow mb-4 md:mb-6">{hero.eyebrow}</p>
+
           <h1 id="hero-heading" className="hero-headline-type max-w-4xl">
             <LineReveal delay={0.15} lines={["Built to mean", "something."]} />
           </h1>
+
           <p className="mt-6 max-w-lg body-lg md:mt-8">{hero.secondary}</p>
+
           <div className="hero-cta-row mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center md:mt-10 md:gap-4">
             <Link
               href="/contact"
@@ -116,8 +120,7 @@ export function HeroSection() {
             data-hero-hint
             className="max-w-xs font-mono text-xs uppercase leading-relaxed tracking-widest text-text-subtle"
           >
-            <span className="hidden md:inline">loopcodez · design, build, ship</span>
-            <span className="md:hidden">loopcodez · design, build, ship</span>
+            loopcodez · design, build, ship
           </p>
           <div className="hidden font-mono text-xs uppercase leading-relaxed tracking-widest text-text-subtle md:block">
             <p className="text-paper-muted">Est. Room 105</p>
