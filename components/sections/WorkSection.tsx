@@ -8,8 +8,6 @@ import { Reveal } from "@/components/motion/Reveal";
 import { WorkCardMotion } from "@/components/motion/Interactions";
 import { ProjectCardVisual } from "@/components/work/ProjectCardVisual";
 import {
-  getPrimaryFeaturedProject,
-  getSelectedWorkProjects,
   type CaseStudy,
 } from "@/lib/content/projects";
 
@@ -75,9 +73,15 @@ function WorkProjectCard({
   );
 }
 
-export function WorkSection() {
-  const featured = getPrimaryFeaturedProject();
-  const selected = getSelectedWorkProjects();
+export function WorkSection({ projects }: { projects: CaseStudy[] }) {
+  const featuredProjects = projects
+    .filter((project) => project.featured)
+    .sort((a, b) => a.displayIndex - b.displayIndex);
+  const featured =
+    featuredProjects.find((project) => project.primaryFeatured) ??
+    featuredProjects.find((project) => project.approved && project.status === "live") ??
+    featuredProjects[0];
+  const selected = featuredProjects.filter((project) => project.slug !== featured?.slug);
 
   return (
     <section

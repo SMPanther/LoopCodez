@@ -6,15 +6,20 @@ import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { WhatWeBuildSection } from "@/components/sections/WhatWeBuildSection";
 import { WorkSection } from "@/components/sections/WorkSection";
+import { getProjectsForSite } from "@/lib/content/project-store";
 
-export default function HomePage() {
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const projects = await getProjectsForSite();
+
   return (
     <>
       <HeroSection />
       <ScrollParticleBridge />
       <ServicesSection />
       <WhatWeBuildSection />
-      <WorkSection />
+      <WorkSection projects={projects} />
       <ProcessSection />
       <AboutSection />
       <CtaSection />

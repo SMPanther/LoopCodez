@@ -5,8 +5,6 @@ import { useMemo, useState } from "react";
 import { SectionMarker } from "@/components/ui/SectionMarker";
 import { Tag } from "@/components/ui/Tag";
 import {
-  filterProjectsByCategory,
-  getProjectCategories,
   type CaseStudy,
 } from "@/lib/content/projects";
 import { ProjectCardVisual } from "@/components/work/ProjectCardVisual";
@@ -17,12 +15,15 @@ type WorkArchiveProps = {
 };
 
 export function WorkArchive({ projects }: WorkArchiveProps) {
-  const categories = useMemo(() => getProjectCategories(), []);
+  const categories = useMemo(
+    () => [...new Set(projects.map((project) => project.category))],
+    [projects],
+  );
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const filtered = useMemo(
-    () => filterProjectsByCategory(activeCategory),
-    [activeCategory],
+    () => activeCategory ? projects.filter((project) => project.category === activeCategory) : projects,
+    [activeCategory, projects],
   );
 
   return (

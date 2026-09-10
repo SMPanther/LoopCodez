@@ -8,24 +8,22 @@ import {
   CaseStudyNextNav,
   CaseStudyTechStack,
 } from "@/components/case-study/CaseStudySections";
-import {
-  getAdjacentProjects,
-  getAllProjects,
-  getProjectBySlug,
-} from "@/lib/content/projects";
+import { getAdjacentProjectsForSite, getProjectBySlugForSite, getProjectsForSite } from "@/lib/content/project-store";
 import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const dynamic = "force-dynamic";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
-  return getAllProjects().map((p) => ({ slug: p.slug }));
+  return (await getProjectsForSite()).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = await getProjectBySlugForSite(slug);
   if (!project) return { title: "Project" };
   return createPageMetadata({
     title: project.title,
@@ -36,10 +34,10 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function CaseStudyPage({ params }: Props) {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = await getProjectBySlugForSite(slug);
   if (!project) notFound();
 
-  const { prev, next } = getAdjacentProjects(slug);
+  const { prev, next } = await getAdjacentProjectsForSite(slug);
 
   return (
     <article className="section-pad">

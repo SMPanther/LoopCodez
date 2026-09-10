@@ -43,7 +43,7 @@ export function SiteFooter() {
         <div className="grid-site gap-y-10">
           <div className="col-span-12 lg:col-span-7">
             <div className="mb-4 flex items-center gap-3">
-              <BrandMark />
+              <BrandMark className="brand-mark--bare" />
               <p className="font-display text-xl font-semibold tracking-tight">
                 loopcodez
               </p>

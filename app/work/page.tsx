@@ -1,8 +1,10 @@
 import { AmbientBackground } from "@/components/graphics/AmbientBackground";
 import { WorkArchive } from "@/components/work/WorkArchive";
 import { SectionMarker } from "@/components/ui/SectionMarker";
-import { getAllProjects } from "@/lib/content/projects";
+import { getProjectsForSite } from "@/lib/content/project-store";
 import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = createPageMetadata({
   title: "Work",
@@ -11,8 +13,8 @@ export const metadata = createPageMetadata({
   path: "/work",
 });
 
-export default function WorkPage() {
-  const projects = getAllProjects();
+export default async function WorkPage() {
+  const projects = await getProjectsForSite();
   const liveCount = projects.filter((p) => p.approved && p.liveUrl).length;
 
   return (
